@@ -2,8 +2,9 @@
     "name": "fastdrop",
     "displayName": "FastDrop",
     "description": "Drop all user databases by just one click",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "MichalSternadel",
+    "icon": "logo.png",
     "engines": {
         "vscode": "^1.34.0",
         "azdata": "*"

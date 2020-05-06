@@ -1,4 +1,4 @@
-# Fast Drop
+# FastDrop
 
 Extension to Azure Data Studio that adds a "Drop all databases" option when right-clicking on a Databases.
 
