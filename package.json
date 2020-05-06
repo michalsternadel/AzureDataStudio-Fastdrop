@@ -1,0 +1,55 @@
+{
+    "name": "fastdrop",
+    "displayName": "FastDrop",
+    "description": "Drop all user databases by just one click",
+    "version": "0.0.1",
+    "publisher": "MichalSternadel",
+    "engines": {
+        "vscode": "^1.34.0",
+        "azdata": "*"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:fastdrop.dropalldatabases"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "fastdrop.dropalldatabases",
+                "title": "Drop all databases"
+            }
+        ],
+        "menus": {
+            "objectExplorer/item/context": [
+                {
+                    "command": "fastdrop.dropalldatabases",
+                    "when": "connectionProvider == MSSQL && nodeType && nodeType == Folder && nodeLabel=~/^Databases$/",
+                    "group": "1data1"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install && node ./node_modules/azdata/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "eslint": "^4.11.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42",
+        "azdata": "1.0.0"
+    },
+    "dependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/michalsternadel/AzureDataStudio-Fastdrop.git"
+    },
+    "bugs": {
+        "url": "https://github.com/michalsternadel/AzureDataStudio-Fastdrop/issues"
+    }
+}
