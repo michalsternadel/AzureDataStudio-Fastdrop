@@ -2,7 +2,7 @@
     "name": "fastdrop",
     "displayName": "FastDrop",
     "description": "Drop all user databases by just one click",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "MichalSternadel",
     "icon": "logo.png",
     "engines": {
